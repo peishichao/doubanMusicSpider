@@ -5,10 +5,25 @@
 # See documentation in:
 # http://doc.scrapy.org/en/latest/topics/items.html
 
-import scrapy
+from scrapy import Item,Field
 
 
-class DoubanmusicspiderItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+#music items
+class MusicItem(Item):
+    music_name = Field()
+    music_alias = Field()
+    music_singer = Field()
+    music_time = Field()
+    music_rating = Field()
+    music_votes = Field()
+    music_tags = Field()
+    music_url = Field()
+
+#music review
+class MusicReviewItem(Item):
+    review_title = Field()
+    review_content = Field()
+    review_author = Field()
+    review_music = Field()
+    review_time = Field()
+    review_url = Field()
